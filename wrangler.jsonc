@@ -1,0 +1,12 @@
+{
+  "name": "premier-cleaning-uganda",
+  "compatibility_date": "2026-08-30",
+  "main": "./dist/_worker.js/index.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

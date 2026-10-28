@@ -5,9 +5,14 @@ import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import icon from 'astro-icon';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'server', // Use 'server' or 'hybrid' for SSR/on-demand rendering
+    adapter: cloudflare({
+    imageService: 'compile', // Recommended for Cloudflare Workers environments
+    }),
 	site: 'https://pro-cleaning-eta.vercel.app/',
 	vite: {
 		plugins: [tailwindcss()],
