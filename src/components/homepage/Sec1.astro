@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="section section-1">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div class="order-2 md:order-1">
+        <p class="mb-3">Premium cleaning solutions</p>
+        <h2>Exceptional Quality, Friendly Care, Honest Rates</h2>
+        <p class="mb-6">
+          From personal residential care to large-scale commercial spaces, we provide fully customized cleaning solutions for every need.
+        </p>
+        <a
+          href="tel:256394708043"
+          class="btn bg-main border-main text-white rounded-lg hover:bg-green-600"
+          >Call Now</a
+        >
+      </div>
+      <div class="order-1 md:order-2">
+        <Image
+          src="/img/img1.webp"
+          alt=""
+          width="478"
+          height="421"
+          format="webp"
+          quality={45}
+          class="w-auto h-auto m-auto"
+        />
+      </div>
+    </div>
+  </div>
+</section>

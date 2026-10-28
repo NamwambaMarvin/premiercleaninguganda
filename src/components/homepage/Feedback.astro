@@ -1,0 +1,180 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import Swiper from "../Swiper.astro";
+---
+
+<section class="section section-reviews">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2>Feedback About Their Experience With Us</h2>
+        <p class="mt-4">
+          Read testimonials from our satisfied clients. See how our cleaning
+          services have made a difference in their lives and homes
+        </p>
+      </div>
+      <div>
+        <Swiper
+          pagination={false}
+          navigation={true}
+          id="mySwiper"
+          prev="swiper-prev"
+          next="swiper-next"
+        >
+          <div class="swiper-slide">
+            <article
+              class="rounded-xl p-10 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
+            >
+            <!--
+              <Image
+                src="/img/comments/cmnt1.webp"
+                alt=""
+                format="webp"
+                quality={45}
+                width="100"
+                height="100"
+                class="w-full h-auto max-w-25"
+              /> 
+              -->
+              <div class="grid gap-0">
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                  <div>
+                    <p class="text-lg font-semibold">Sarah N., Kampala</p>
+                    <p>Business Woman</p>
+                  </div>
+                  <!-- 
+                  <Image
+                    src="/img/icons/quote.svg"
+                    width="50"
+                    height="50"
+                    alt="quote"
+                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
+                  />
+                  -->
+                </div>
+
+                <div class="flex gap-1 items-center text-yellow-500 mt-2 mb-4">
+                  {
+                    Array.from({ length: 5 }).map((star) => (
+                      <Icon name="heroicons:star-solid" size={24} />
+                    ))
+                  }
+                </div>
+
+                <p class="text-sm">
+                  I hired Premier Cleaning Uganda for a deep clean of my apartment in Kampala before moving in, and I was very impressed. The team arrived on time, worked carefully, and cleaned areas I had not even thought about, including behind appliances, window tracks, bathrooms, and kitchen cabinets. The house looked and smelled fresh by the time they finished. Communication was easy from the first call to the final inspection. I would definitely recommend them to anyone looking for reliable cleaning services in Kampala.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article
+              class="rounded-xl p-10 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
+            >
+            <!-- 
+              <Image
+                src="/img/comments/cmnt1.webp"
+                alt=""
+                format="webp"
+                quality={45}
+                width="100"
+                height="100"
+                class="w-full h-auto max-w-25"
+              />
+              -->
+              <div class="grid gap-0">
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                  <div>
+                    <p class="text-lg font-semibold">David M., Kampala</p>
+                    <p>Operations Manager</p>
+                  </div>
+                  <!--
+                  <Image
+                    src="/img/icons/quote.svg"
+                    width="50"
+                    height="50"
+                    alt="quote"
+                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
+                  /> 
+                  -->
+                </div>
+
+                <div class="flex gap-1 items-center text-yellow-500 mb-4">
+                  {
+                    Array.from({ length: 5 }).map((star) => (
+                      <Icon name="heroicons:star-solid" size={24} />
+                    ))
+                  }
+                </div>
+
+                <p class="text-sm">
+                  Premier Cleaning Uganda has been cleaning our office for several months now, and the difference is clear. The team is punctual, respectful, and consistent. They clean our workstations, restrooms, kitchen area, floors, and high-touch surfaces without disrupting our staff. Our clients have even commented on how clean and organized the office looks. Their flexible schedule and professional approach make them easy to work with. Highly recommended for any business in Uganda that needs dependable office cleaning.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="swiper-slide">
+            <article
+              class="rounded-xl p-10 sm:grid-cols-[100px_1fr] gap-4 items-center border border-gray-200 border-t-4 border-t-main border-r-4 border-r-main relative"
+            >
+             <!--  <Image
+                src="/img/comments/cmnt1.webp"
+                alt=""
+                format="webp"
+                quality={45}
+                width="100"
+                height="100"
+                class="w-full h-auto max-w-25"
+              />
+              -->
+              <div class="grid gap-0">
+                <div class="flex flex-wrap justify-between items-center gap-4">
+                  <div>
+                    <p class="text-lg font-semibold">Joseph K.</p>
+                    <p>Property Owner, Wakiso</p>
+                  </div>
+                  <!--
+                  <Image
+                    src="/img/icons/quote.svg"
+                    width="50"
+                    height="50"
+                    alt="quote"
+                    class="w-auto h-auto max-w-18.75 absolute top-2 right-2"
+                  />
+                  -->
+                </div>
+
+                <div class="flex gap-1 items-center text-yellow-500 mb-4">
+                  {
+                    Array.from({ length: 5 }).map((star) => (
+                      <Icon name="heroicons:star-solid" size={24} />
+                    ))
+                  }
+                </div>
+
+                <p class="text-sm">
+                  After completing renovations at our property, there was dust everywhere—from the floors and windows to the walls and light fittings. Premier Cleaning Uganda came in and transformed the place. They removed construction dust, cleaned paint marks where possible, scrubbed the floors, and left the space ready for handover. The team was hardworking, well organized, and paid attention to detail. I was especially happy with how they handled the bathrooms and kitchen. If you need post-construction cleaning in Uganda, these are the people to call.
+                </p>
+              </div>
+            </article>
+          </div>
+        </Swiper>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  import Swiper from "swiper";
+  import { Navigation } from "swiper/modules";
+
+  new Swiper("#mySwiper", {
+    modules: [Navigation],
+    loop: true,
+
+    navigation: {
+      nextEl: ".swiper-next",
+      prevEl: ".swiper-prev",
+    },
+  });
+</script>
